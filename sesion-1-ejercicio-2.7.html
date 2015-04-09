@@ -39,6 +39,8 @@
         function switchVideo(vElement , newVideo) {
             if (vElement.canPlayType(newVideo.mime) != "") {
                 var op = 1;
+                //totalmente opaco
+                //para reducir la opacidad gradualemente usamos setInterval
                 var timer = setInterval(function () {
                     if (op <= 0.05){
                         clearInterval(timer);
@@ -73,28 +75,28 @@
     EJERCICIO 1: Descargar el recurso identificado por el siguiente URL
         http://download.blender.org/durian/trailer/sintel_trailer-720p.mp4    
 
-     EJERCICIO 2: Generar 3 versiones webm del v’deo anterior a 320p, 480p y 720p
+     EJERCICIO 2: Generar 3 versiones webm del vâ€™deo anterior a 320p, 480p y 720p
     
         ffmpeg -i sintel_trailer-720p.mp4 -vf scale=320:-1 sintel_trailer-320p.webm 
         ffmpeg -i sintel_trailer-720p.mp4 -vf scale=480:-1 sintel_trailer-480p.webm
         ffmpeg -i sintel_trailer-720p.mp4 -vf scale=720:-1 sintel_trailer-720p.webm
     
     EJERCICIO 3: Usando Javascript conseguir que al cargar el documento se
-    inicie la reproducci—n del v’deo con menor resoluci—n. El cuadro del v’deo
+    inicie la reproducciâ€”n del vâ€™deo con menor resoluciâ€”n. El cuadro del vâ€™deo
     debe tener una altura de 600 puntos
     
-    EJERCICIO 4: Al pulsar los botones: low, medium y high iniciar la reproducci—n
-    del contenido a 360p, 480p y 720p respectivamente. El cuadro de reproducci—n
-    debe permanecer siempre del mismo tama–o
+    EJERCICIO 4: Al pulsar los botones: low, medium y high iniciar la reproducciâ€”n
+    del contenido a 360p, 480p y 720p respectivamente. El cuadro de reproducciâ€”n
+    debe permanecer siempre del mismo tamaâ€“o
     
-    EJERCICIO 5: Mantener la posici—n de reproducci—n al realizar la conmutaci—n
+    EJERCICIO 5: Mantener la posiciâ€”n de reproducciâ€”n al realizar la conmutaciâ€”n
     
-    EJERCICIO 6: Determinar con la mayor certeza posible si el contenido ser‡ soportado
-    por el navegador antes de intentar la reproducci—n. Informar al usuario y no
-    proceder a la conmutaci—n
+    EJERCICIO 6: Determinar con la mayor certeza posible si el contenido serâ€¡ soportado
+    por el navegador antes de intentar la reproducciâ€”n. Informar al usuario y no
+    proceder a la conmutaciâ€”n
     
-    EJERCICIO 7: Implementar una transici—n suave al cambiar de resoluci—n, evitando
-    la presentaci—n de frames que no correspondan con el momento correcto de reproducci—n
+    EJERCICIO 7: Implementar una transiciâ€”n suave al cambiar de resoluciâ€”n, evitando
+    la presentaciâ€”n de frames que no correspondan con el momento correcto de reproducciâ€”n
     -->
     
     <video id="miVideo" onloadedmetadata="playVideo(this)" controls preload='metadata' ></video>

@@ -42,6 +42,12 @@
           currentTime> cue ??
           -> Loop cue
           -> Update p
+          for(i in cue){
+             time = cue[i];
+             if(time<= myVideo.currentTime){
+                subtitle.innerHTML = time
+                }
+            }    
         }
         </script>
          <video ontimeupdate = "update()">
